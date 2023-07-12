@@ -48,71 +48,7 @@ const CreateHtmltoPdf = () => {
   const [weight, setWeight] = useState('');
   const [errorWeight, setErrorWeight] = useState(false);
 
-//   const genratePDF = async () => {
-//     let options = {
-// html:` <div style="width: 216px; height: 360px;" >
-// <div style="display:flex; justify-content: space-between;">
-//   <div  style="display: flex; flex-direction: column;"><span style='border:0.5px solid black; padding:1px;background-color:#0b223f;color:white;' >Plentys.pk</span><span style='border:0.5px solid black; padding:1px;width:94%' >111</span></div><div  style="display: flex; flex-direction: column;">
-//   <span style='border:0.5px solid black; padding:1px'>Fragile</span><span style='border:0.5px solid black; padding:1px;width:94%' >111</span></div>
-// <div  style="display: flex; flex-direction: column;"><span style='border:0.5px solid black ;padding:1px</div>'>Cold</span><span style='border:0.5px solid black; padding:1px'>000</span></div></div>
-// <div style="display:flex; "><div  style="display: flex; flex-direction: column; width:100%; margin-top:2px;"><span style='border:0.5px solid black; padding:1px;width:50%';font-size: 12px; font-size: 12px;>Customer</span><span style='border:0.5px solid black; padding:1px;width:100%';font-size: 12px; >SANDESH</span></div></div>
-// <div style="display:flex; "><div  style="display: flex; flex-direction: column; width:100%; margin-top:2px;"><span style='border:0.5px solid black; padding:1px;width:50%;font-size: 12px;' >ADDRESS</span><span style='border:0.5px solid black; padding:1px;width:100% ;font-size: 12px;' >GARDENS SOTH LYARI KARACHI GARDEN SOTH LYARI KARACHI GARDEN SOTH LYARI KARACHI</span></div></div>
-// <div style="display:flex; "><div  style="display: flex; flex-direction: column; width:100%; margin-top:2px;"><span style='border:0.5px solid black; padding:1px;width:100% ; text-align:center; font-size: 6px;' >Print By Zyan</span></div>
 
-// </div>
-// <div style="transform: rotate(180deg); margin-top:5px;" >
-// <div style="display:flex; justify-content: space-between; width:100%;"><div  style="display: flex; flex-direction: column;"><span style='border:0.5px solid black; padding:10px;background-color:#0b223f;color:white;' >Plentys.pk</span></div>
-// <div  style="display: flex; flex-direction: column; width:40%;"><span style='border:0.5px solid black ;padding:1px;width:100%;font-size: 8px; padding:2px;'>ORDERED DATE</span><span style='width:100%;border:0.5px solid black; padding:1px;font-size: 8px;padding:2px;'>18-12-23</span></div></div>
-// <div style="display:flex;flex-direction: row; justify-content: space-between; width:100%;">
-// <div  style="display: flex; flex-direction: column;margin-top: 5px; width: 45%;">
-//   <div style='border:0.5px solid black;font-size:6px;'>ORDEREDID:<div style='border:0.5px solid black;font-size:12px;padding: 5px;'>111000<div></div></div>
-//   <div style='border:0.5px solid black;font-size:6px;margin-top: 1px;padding: 5px;'>KARACHI</div>
-
-// </div>
-// </div>
-// <div  style="display: flex; flex-direction: column;margin-top: 5px; width: 45%;">
-//   <div style='border:0.5px solid black;font-size:12px;padding: 10px;'>Qr Code<div></div></div>
-//   <div style='border:0.5px solid black;font-size:6px;margin-top: 1px;padding: 5px;'>Test:01234</div>
-
-// </div>
-// </div>
-// <div style="display: flex;flex-direction: row; width: 100%;">
-//   <div style="display: flex;flex-direction: row; width: 100%;">
-
- 
-// </div>
-//   <div>
-
-//   </div>
-
-// </div>
-// <div style="display: flex ; width:  100%;">
-// <div style="display: flex; width: 40%; flex-direction: column;">
-// <div  style='border:0.5px solid black;font-size:12px;text-align: center;'>Amount</div>
-// <div style='border:0.5px solid black;font-size:12px;text-align: center;'>1000,000</div>
-// </div>
-// <div  style="display: flex; width: 50%; margin-left: 40px;" >
-// <div style="display: flex; width: 50%; flex-direction: column;">
-// <span style="border:0.5px solid black;font-size:12px; text-align: center;">Pices</span>
-// <span style="border:0.5px solid black;font-size:12px;text-align: center;">0.5</span>
-// </div>
-// <div style="display: flex; width: 50%; flex-direction: column;">
-// <span style="border:0.5px solid black;font-size:12px;text-align: center;">wigth</span>
-// <span style="border:0.5px solid black;font-size:12px;text-align: center;">0.5kg</span>
-// </div>
-
-// </div>
-// </div>
-// </div>`,
-//       fileName: 'test',
-//       directory: 'Documents',
-//       width: 216,
-//       height: 360,
-//     };
-//     const file = await RNHTMLtoPDF.convert(options);
-//     console.log('here is our file', file); 
-//   };
-  ///console.log(weight)
   const getBill = async () => {
     if (plentysId.length >= 6) {
       setErrorPlentysId(true);
@@ -251,7 +187,8 @@ html:` <div style="width: 216px; height: 360px;" >
   return (
     <View className="flex-1">
       <View className="w-full h-16 bg-[#0b223f]">
-        <Text className="text-white text-lg font-bold text-center mt-4 font-serif">
+        {/* <Text  className="text-white text-lg font-bold text-center mt-4 font-serif"> */}
+        <Text className="text-white text-center mt-4 text-lg" style={{fontFamily:'Poppins-Bold'}}>
           Bill Printing App
         </Text>
       </View>
@@ -259,7 +196,7 @@ html:` <div style="width: 216px; height: 360px;" >
         <View className="items-center">
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0]">
             <View className=" relative">
-              <Text className="absolute top-2 left-8 text-[#0b223f]">
+              <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">
                 Plentys.PK Id
               </Text>
               <View className="top-2">
@@ -278,7 +215,7 @@ html:` <div style="width: 216px; height: 360px;" >
             </View>
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-8 text-[#0b223f]">
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">
               FRAGILE
             </Text>
             <View className="top-2">
@@ -300,7 +237,7 @@ html:` <div style="width: 216px; height: 360px;" >
             ) : null}
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-8 text-[#0b223f]">COLD</Text>
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">COLD</Text>
             <View className="top-2">
               <MaterialCommunityIcons
                 name="snowflake"
@@ -320,7 +257,7 @@ html:` <div style="width: 216px; height: 360px;" >
             ) : null}
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-8 text-[#0b223f]">
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">
               CUSTOMER NAME
             </Text>
             <View className="top-2">
@@ -338,7 +275,7 @@ html:` <div style="width: 216px; height: 360px;" >
             ) : null}
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-8 text-[#0b223f]">
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">
               ADDRESS
             </Text>
             <View className="top-2">
@@ -356,7 +293,7 @@ html:` <div style="width: 216px; height: 360px;" >
             ) : null}
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-8 text-[#0b223f]">
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">
               Print By
             </Text>
             <View className="top-2">
@@ -374,7 +311,7 @@ html:` <div style="width: 216px; height: 360px;" >
             ) : null}
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-8 text-[#0b223f]">
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">
               ORDERED DATE
             </Text>
             <View className="top-2">
@@ -392,7 +329,7 @@ html:` <div style="width: 216px; height: 360px;" >
             ) : null}
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-8 text-[#0b223f]">
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">
               ORDERED ID
             </Text>
             <View className="top-2">
@@ -410,7 +347,7 @@ html:` <div style="width: 216px; height: 360px;" >
             ) : null}
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-8 text-[#0b223f]">QrCode</Text>
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">QrCode</Text>
             <View className="top-2">
               <AntDesign name="qrcode" size={20} color="black" />
             </View>
@@ -426,7 +363,7 @@ html:` <div style="width: 216px; height: 360px;" >
             ) : null}
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-9 text-[#0b223f]">City</Text>
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-9 text-[#0b223f]">City</Text>
             <View className="top-2">
               <FontAwesome5 name="city" size={20} color="black" />
             </View>
@@ -442,7 +379,7 @@ html:` <div style="width: 216px; height: 360px;" >
             ) : null}
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-8 text-[#0b223f]">
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">
               Test Id:
             </Text>
             <View className="top-2">
@@ -464,7 +401,7 @@ html:` <div style="width: 216px; height: 360px;" >
             ) : null}
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-8 text-[#0b223f]">Amount</Text>
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">Amount</Text>
             <View className="top-2">
               <FontAwesome name="dollar" size={20} color="black" />
             </View>
@@ -480,7 +417,7 @@ html:` <div style="width: 216px; height: 360px;" >
             ) : null}
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-8 text-[#0b223f]">
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">
               Quantity
             </Text>
             <View className="top-2">
@@ -498,7 +435,7 @@ html:` <div style="width: 216px; height: 360px;" >
             ) : null}
           </View>
           <View className="w-11/12  h-16 align-middle rounded mt-4 bg-[#e2e8f0] relative">
-            <Text className="absolute top-2 left-8 text-[#0b223f]">Weight</Text>
+            <Text style={{fontFamily:'Poppins-Light'}} className="absolute top-2 left-8 text-[#0b223f]">Weight</Text>
             <View className="top-2">
               <MaterialCommunityIcons
                 name="weight-kilogram"
@@ -520,7 +457,7 @@ html:` <div style="width: 216px; height: 360px;" >
           <TouchableOpacity
             onPress={() => getBill()}
             className="w-10/12 bg-[#0b223f] h-12 rounded-full mt-6 mb-6 justify-center ">
-            <Text className="text-slate-50 text-center font-bold text-lg ">
+            <Text style={{fontFamily:'Poppins-Light'}} className="text-slate-50 text-center  text-lg ">
               Print Bill
             </Text>
           </TouchableOpacity>
